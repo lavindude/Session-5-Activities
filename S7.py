@@ -1,6 +1,6 @@
 ''' (NOT DONE)
 Problem 1: Synthetic (exponent and coeffient of the x 
-you're dividing by must be 1 )
+you're dividing by must be 1)
 '''
 
 highest_degree = int(input("Highest degree of function: "))
