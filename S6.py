@@ -42,7 +42,7 @@ for i in range(0, times):
     quadratic(a, b, c)
 
 '''
-Problem 2 Make a function that gets a list from a user and orders it from least to greatest.
+Problem 2: Make a function that gets a list from a user and orders it from least to greatest.
 Do not use the .sort() function. 
 '''
 
@@ -61,9 +61,16 @@ def least_to_greatest(og):
         ordered = True
         for k in range(0, len(og) - 1):
             if og[k] > og[k + 1]:
+                # breaks from the loop once everything is in order 
                 ordered = False
 
     print(og)
+
+''' 
+This while loop keeps asking lists from the user until the user presses
+enter with a null input, in other words, the user presses enter without
+any input:
+'''
 
 while True:
     og = list()
@@ -77,5 +84,6 @@ while True:
         og.append(item)
         counter += 1
 
+    # call the function that orders the list
     least_to_greatest(og)
     print()
