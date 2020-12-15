@@ -8,6 +8,7 @@ Directions: Make a function that takes in a, b, and c from the standard form of 
 '''
 
 import math
+import random
 
 times = int(input("How many quadratic equations would you like to calculate? "))
 
@@ -48,21 +49,33 @@ Do not use the .sort() function.
 
 def least_to_greatest(og):
     ordered = False
-
     while ordered == False:
-        #keep swapping numbers until the list is in order
+        # you could make a shuffle function of your own using random integers to index
+        random.shuffle(og)
+
+        ordered = True
         for i in range(0, len(og) - 1):
             if og[i + 1] < og[i]:
-                temp = og[i]
-                og[i] = og[i + 1]
-                og[i + 1] = temp
-
-        #check if the variable 'ordered' should be changed
-        ordered = True
-        for k in range(0, len(og) - 1):
-            if og[k] > og[k + 1]:
-                # breaks from the loop once everything is in order 
                 ordered = False
+
+
+    ''' one way of doing this '''
+    # ordered = False
+
+    # while ordered == False:
+    #     #keep swapping numbers until the list is in order
+    #     for i in range(0, len(og) - 1):
+    #         if og[i + 1] < og[i]:
+    #             temp = og[i]
+    #             og[i] = og[i + 1]
+    #             og[i + 1] = temp
+
+    #     #check if the variable 'ordered' should be changed
+    #     ordered = True
+    #     for k in range(0, len(og) - 1):
+    #         if og[k] > og[k + 1]:
+    #             # breaks from the loop once everything is in order 
+    #             ordered = False
 
     print(og)
 
